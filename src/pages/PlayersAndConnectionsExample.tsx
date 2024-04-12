@@ -13,61 +13,24 @@ import {
 export const PlayersAndConnectionsExample = () => {
   const players = usePlayers();
   const connections = useConnections();
-  const { sendRaceControlMessageToConnection, sendRaceControlMessageToPlayer } =
-    useRaceControlMessage();
+  const { sendRaceControlMessageToConnection, sendRaceControlMessageToPlayer } = useRaceControlMessage();
   const { sendMessageToConnection, sendMessageToPlayer } = useMessage();
 
-  const handlePlayerClick =
-    (PLID: number) => (packet: IS_BTC, inSim: InSim) => {
-      inSim.send(new IS_MST({ Msg: `/echo PLID ${PLID}` }));
-      sendRaceControlMessageToConnection(
-        packet.UCID,
-        `Clicked PLID ${PLID}`,
-        2000,
-      );
-      sendMessageToConnection(
-        packet.UCID,
-        `Clicked PLID ${PLID}`,
-        MessageSound.SND_SYSMESSAGE,
-      );
+  const handlePlayerClick = (PLID: number) => (packet: IS_BTC, inSim: InSim) => {
+    inSim.send(new IS_MST({ Msg: `/echo PLID ${PLID}` }));
+    sendRaceControlMessageToConnection(packet.UCID, `Clicked PLID ${PLID}`, 2000,);
+    sendMessageToConnection(packet.UCID, `Clicked PLID ${PLID}`, MessageSound.SND_SYSMESSAGE,);
+    sendRaceControlMessageToPlayer(PLID, 'Someone clicked your player name', 2000,);
+    sendMessageToPlayer(PLID, 'Someone clicked your player name', MessageSound.SND_SYSMESSAGE,);
+  };
 
-      sendRaceControlMessageToPlayer(
-        PLID,
-        'Someone clicked your player name',
-        2000,
-      );
-      sendMessageToPlayer(
-        PLID,
-        'Someone clicked your player name',
-        MessageSound.SND_SYSMESSAGE,
-      );
-    };
-
-  const handleConnectionClick =
-    (UCID: number) => (packet: IS_BTC, inSim: InSim) => {
-      inSim.send(new IS_MST({ Msg: `/echo UCID ${UCID}` }));
-      sendRaceControlMessageToConnection(
-        packet.UCID,
-        `Clicked UCID ${UCID}`,
-        2000,
-      );
-      sendMessageToConnection(
-        packet.UCID,
-        `Clicked UCID ${UCID}`,
-        MessageSound.SND_SYSMESSAGE,
-      );
-
-      sendRaceControlMessageToConnection(
-        UCID,
-        'Someone clicked your connection name',
-        2000,
-      );
-      sendMessageToConnection(
-        UCID,
-        'Someone clicked your connection name',
-        MessageSound.SND_SYSMESSAGE,
-      );
-    };
+  const handleConnectionClick = (UCID: number) => (packet: IS_BTC, inSim: InSim) => {
+    inSim.send(new IS_MST({ Msg: `/echo UCID ${UCID}` }));
+    sendRaceControlMessageToConnection(packet.UCID, `Clicked UCID ${UCID}`, 2000,);
+    sendMessageToConnection(packet.UCID, `Clicked UCID ${UCID}`, MessageSound.SND_SYSMESSAGE,);
+    sendRaceControlMessageToConnection(UCID, 'Someone clicked your connection name', 2000,);
+    sendMessageToConnection(UCID, 'Someone clicked your connection name', MessageSound.SND_SYSMESSAGE,);
+  };
 
   const top = 0;
   const left = 164;

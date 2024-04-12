@@ -53,4 +53,17 @@ export class helper {
         });
         return newArr.join("");
     };
+    static formatNumber(num: number, digits: number): any {
+        if (num === undefined) {
+            return 0;
+        }
+        if (isNaN(num)) {
+            return "";
+        }
+        return num.toFixed(digits).replace('.', ',').replace(/(\d)(?=(\d{3})+,)/g, '$1.');
+    };
+    static getUniqueItemsByProperty = <T>(arr: Array<T>, key: keyof T): Array<T> => {
+        return [...new Map(arr.map(item => [item[key], item])).values()]
+    };
+    
 };

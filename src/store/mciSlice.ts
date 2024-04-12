@@ -6,6 +6,7 @@ export interface IMciSlice {
     wayName: string;
     speedLimit: number;
     freePit: boolean;
+    userSpeed: number;
 };
 
 export const mciSlice = createSlice<IMciSlice, MapReducerPayloads<IMciSlice, {
@@ -13,6 +14,7 @@ export const mciSlice = createSlice<IMciSlice, MapReducerPayloads<IMciSlice, {
     setWayName: string;
     setSpeedLimit: number;
     setFreePit: boolean;
+    setUserSpeed: number;
 }>>({
     name: 'mci',
     initialState: {
@@ -20,6 +22,7 @@ export const mciSlice = createSlice<IMciSlice, MapReducerPayloads<IMciSlice, {
         wayName: "Spectator",
         speedLimit: 0,
         freePit: false,
+        userSpeed: 0,
     },
     reducers: {
         setWayDedect: (state, action) => {
@@ -33,6 +36,9 @@ export const mciSlice = createSlice<IMciSlice, MapReducerPayloads<IMciSlice, {
         },
         setFreePit: (state, action) => {
             state.freePit = action.payload;
+        },
+        setUserSpeed: (state, action) => {
+            state.userSpeed = action.payload;
         },
     },
 });
