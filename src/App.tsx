@@ -1,9 +1,20 @@
-import { Button } from "react-node-insim";
+import { PlayersAndConnectionsExample } from "./pages/PlayersAndConnectionsExample";
+import { PacketHooksExample } from "./pages/PacketHooksExample";
+import { AuthGuard } from "./pages/auth";
+import { Packages } from "./pages";
+import { Dashboard } from "./pages/base/Dashboard";
 
-export function App() {
+export const App = () => {
   return (
-    <Button top={100} left={80} width={30} height={10}>
-      Hello InSim!
-    </Button>
-  )
-}
+    <>
+      {/* <AuthGuard> */}
+      <>
+        <PacketHooksExample />
+        <PlayersAndConnectionsExample />
+        <Dashboard />
+        <Packages />
+      </>
+      {/* </AuthGuard> */}
+    </>
+  );
+};
