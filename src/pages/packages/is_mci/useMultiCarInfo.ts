@@ -42,20 +42,21 @@ export const useMultiCarInfo = () => {
             // let pathz = m.Z / 65536;
             // let angle = m.AngVel * 360 / 16384;
             // let heading = m.Heading * 180.0 / 32768.0;
-
+            dispatch(mciSlice.actions.setUserSpeed(kmh));
             multiCarInfo[m.PLID] = m;
-            dispatch(mciSlice.actions.setWayDedect(false));
-            resources.WE.map((s) => {
+            const wayDedect = resources.WE.some((s) => {
                 if (checkPos(s.X?.length, s.X, s.Y, pathx, pathy)) {
-                    dispatch(mciSlice.actions.setWayDedect(true));
                     dispatch(mciSlice.actions.setWayName(s.name));
                     dispatch(mciSlice.actions.setSpeedLimit(s.speedLimit));
                     dispatch(mciSlice.actions.setFreePit(s.UcretsizPit));
-                    dispatch(mciSlice.actions.setUserSpeed(kmh));
+                    return true;
                 }
-            })
-            if (!mci.wayDedect)
+                return false;
+            });
+            dispatch(mciSlice.actions.setWayDedect(wayDedect));
+            if (!wayDedect) {
                 dispatch(mciSlice.actions.setWayName("^0Invalid Path ^350 km/h"));
+            }
         });
     });
     return multiCarInfo;
