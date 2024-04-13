@@ -1,5 +1,5 @@
 export class helper {
-    static UpperCaseAsc = (str: any): string => {
+    static upperCaseAsc = (str: any): string => {
         if (!str) return str;
         let resStr = '';
         for (let i = 0; i < str.length; i++) {
@@ -65,5 +65,7 @@ export class helper {
     static getUniqueItemsByProperty = <T>(arr: Array<T>, key: keyof T): Array<T> => {
         return [...new Map(arr.map(item => [item[key], item])).values()]
     };
-    
+    static removeInSimColorCodes = (str: string): string => {
+        return str.replace(/\^\d/g, '');
+    }
 };

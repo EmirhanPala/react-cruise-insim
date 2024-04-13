@@ -11,12 +11,14 @@ import { Provider } from 'react-redux';
 import { App } from "./App";
 import store from './store';
 
+const flags = InSimFlags.ISF_OBH | InSimFlags.ISF_HLV | InSimFlags.ISF_MCI | InSimFlags.ISF_CON | InSimFlags.ISF_MSO_COLS | InSimFlags.ISF_NLP;
+
 const rootOptions: CreateRootOptions = {
-  name: "React InSim",
+  name: "ReactInSim",
   host: "185.123.101.78",
-  port: 58505,
+  port: 55052,
   adminPassword: "lfsadmin",
-  flags: InSimFlags.ISF_OBH | InSimFlags.ISF_HLV | InSimFlags.ISF_MCI,
+  flags: flags,
   interval: 100,
   prefix: '!',
 };
