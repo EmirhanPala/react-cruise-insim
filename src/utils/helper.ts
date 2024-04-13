@@ -1,5 +1,5 @@
 export class helper {
-    static upperCaseAsc = (str: any): string => {
+    static upperCaseAsc = (str: string): string => {
         if (!str) return str;
         let resStr = '';
         for (let i = 0; i < str.length; i++) {
@@ -41,7 +41,7 @@ export class helper {
         const newNameArr = value.split(separator);
         const newArr = newNameArr.map((m, i) => {
             let newM = "";
-            m = helper.UpperCaseAsc(m)
+            m = helper.upperCaseAsc(m)
             for (let c = 0; c < m.length; c++) {
                 if (i === 0)
                     newM += m[c].toLowerCase()
@@ -53,7 +53,7 @@ export class helper {
         });
         return newArr.join("");
     };
-    static formatNumber(num: number, digits: number): any {
+    static formatNumber(num: number, digits: number): string | number {
         if (num === undefined) {
             return 0;
         }
