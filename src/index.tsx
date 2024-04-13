@@ -11,7 +11,7 @@ import { Provider } from 'react-redux';
 import { App } from "./App";
 import store from './store';
 
-const flags = InSimFlags.ISF_OBH | InSimFlags.ISF_HLV | InSimFlags.ISF_MCI | InSimFlags.ISF_CON | InSimFlags.ISF_MSO_COLS | InSimFlags.ISF_NLP;
+const flags = InSimFlags.ISF_OBH | InSimFlags.ISF_MCI | InSimFlags.ISF_CON | InSimFlags.ISF_MSO_COLS | InSimFlags.ISF_NLP | InSimFlags.ISF_AXM_EDIT | InSimFlags.ISF_AXM_LOAD;
 
 const rootOptions: CreateRootOptions = {
   name: "ReactInSim",
