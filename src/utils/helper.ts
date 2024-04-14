@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export class helper {
     static upperCaseAsc = (str: string): string => {
         if (!str) return str;
@@ -67,5 +69,90 @@ export class helper {
     };
     static removeInSimColorCodes = (str: string): string => {
         return str.replace(/\^\d/g, '');
-    }
+    };
+    static objectToNumber = (val: string | number | null | undefined): number => {
+        if (val == null || val == '' || val == 'undefined') return 0;
+        return Number(val);
+    };
+    static objectToString = (val: string | number | null | undefined): string => {
+        if (!val)
+            return "";
+        return val?.toString();
+    };
+    static startDate = () => {
+        return moment().startOf("day").format('yyyy-MM-DDTHH:mm');
+    };
+    static endDate = () => {
+        return moment().endOf("day").format('yyyy-MM-DDTHH:mm');
+    };
+    static startWeeklyDate = () => {
+        return moment().startOf("isoWeek").format('yyyy-MM-DDTHH:mm');
+    };
+    static endWeeklyDate = () => {
+        return moment().endOf("isoWeek").format('yyyy-MM-DDTHH:mm');
+    };
+    static startWeeklyDateWithValue = (datevalue: string | Date) => {
+        return moment(datevalue).startOf("isoWeek").format('yyyy-MM-DDTHH:mm');
+    };
+    static endWeeklyDateVithValue = (datevalue: string | Date) => {
+        return moment(datevalue).endOf("isoWeek").format('yyyy-MM-DDTHH:mm');
+    };
+    static startMonthlyDate = () => {
+        return moment().startOf("months").format('yyyy-MM-DDTHH:mm');
+    };
+    static endMonthlyDate = () => {
+        return moment().endOf("months").format('yyyy-MM-DDTHH:mm');
+    };
+    static dateTimeNow = () => {
+        return moment().format('yyyy-MM-DDTHH:mm:ss');
+    };
+    static dateTimeToday = () => {
+        return moment().format('yyyy-MM-DD');
+    };
+    static dateTimeTodayAddDay = (day: number) => {
+        return moment().add(day, 'day').format('yyyy-MM-DDT00:00');
+    };
+    static dateTimeNowAddDay = (day: number) => {
+        return moment().add(day, 'day').format('yyyy-MM-DDTHH:mm');
+    };
+    static dateValueFormat = (datevalue: string | Date) => {
+        return moment(datevalue).format('yyyy-MM-DD');
+    };
+    static dateValueFormat2 = (datevalue: string | Date) => {
+        return moment(datevalue).format('DD.MM.yyyy');
+    };
+    static dateValueFormat3 = (datevalue: string | Date) => {
+        return moment(datevalue).format('DD.MM.yyyy HH:mm');
+    };
+    static dateTimeValueFormat = (dateTime: string | Date) => {
+        return moment(dateTime).format('yyyy-MM-DDTHH:mm');
+    };
+    static timeValueFormat = (datevalue: string | Date) => {
+        return moment(datevalue).format('HH:mm');
+    };
+    static jsonToDateTime = (jsonDate: string) => {
+        return moment(jsonDate)
+    };
+    static formatToDateTime = (date: string, format: string) => {
+        return moment(date, format)
+    };
+    static jsonToShortDateString = (jsonDate: string | Date): string => {
+        if (!jsonDate) return '';
+        return moment(jsonDate).format('DD.MM.yyyy');
+    };
+    static jsonToLongDateString = (jsonDate: string | Date): string => {
+        if (!jsonDate) return '';
+        return moment(jsonDate).format('DD.MM.yyyy HH:mm:ss');
+    };
+    static jsonToLongTimeString = (jsonDate: string | Date): string => {
+        if (!jsonDate) return '';
+        return moment(jsonDate).format('HH:mm:ss');
+    };
+    static jsonToTimeString = (jsonDate: string | Date): string => {
+        if (!jsonDate) return '';
+        return moment(jsonDate).format('HH:mm');
+    };
+    static dateTimeAddDay = (date: Date | string, day: number) => {
+        return moment(date).add(day, 'day').format('yyyy-MM-DD');
+    };
 };
