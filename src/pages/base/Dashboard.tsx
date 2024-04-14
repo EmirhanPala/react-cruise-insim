@@ -14,11 +14,11 @@ export const Dashboard = () => {
                 left={169}
                 width={27}
                 alignItems="center"
-                wrap="wrap"
                 background="dark"
                 backgroundColor="light"
                 UCID={255}
                 padding={1}
+                direction="column"
             >
                 <Button width={25} height={4} align="left">^1React Cruise InSim</Button>
                 <Button width={25} height={4} align="left">^7{translate(translatePath, "Money")}: ^3TL 25943</Button>
