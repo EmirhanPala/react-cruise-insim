@@ -29,8 +29,8 @@ export const useMultiCarInfo = () => {
     const mci = useAppSelector(s => s.mci);
     const dispatch = useAppDispatch();
     const players = usePlayers();
-    const selectedMap = "WE";
-    const resources = { ...maps[selectedMap] };
+    const resources = { AS, BL, FE, KY, SO, WE };
+    const veri = resources["WE"]["WE"];
 
     useOnPacket(PacketType.ISP_MCI, (packet, inSim): void => {
         packet.Info.forEach((m) => {
@@ -44,7 +44,7 @@ export const useMultiCarInfo = () => {
             // let heading = m.Heading * 180.0 / 32768.0;
             dispatch(mciSlice.actions.setUserSpeed(kmh));
             multiCarInfo[m.PLID] = m;
-            const wayDedect = resources.WE.some((s) => {
+            const wayDedect = veri.some((s) => {
                 if (checkPos(s.X?.length, s.X, s.Y, pathx, pathy)) {
                     dispatch(mciSlice.actions.setWayName(s.name));
                     dispatch(mciSlice.actions.setSpeedLimit(s.speedLimit));
