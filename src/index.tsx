@@ -15,8 +15,8 @@ const flags = InSimFlags.ISF_OBH | InSimFlags.ISF_MCI | InSimFlags.ISF_CON | InS
 
 const rootOptions: CreateRootOptions = {
   name: "ReactInSim",
-  host: "185.123.101.78",
-  port: 53622,
+  host: "188.122.74.156",
+  port: 58560,
   adminPassword: "lfsadmin",
   flags: flags,
   interval: 100,
@@ -26,11 +26,11 @@ const rootOptions: CreateRootOptions = {
 createRoot(rootOptions).render(
   <StrictMode>
     <Provider store={store}>
-      <PlayersProvider>
-        <ConnectionsProvider>
+      <ConnectionsProvider>
+        <PlayersProvider>
           <App />
-        </ConnectionsProvider>
-      </PlayersProvider>
+        </PlayersProvider>
+      </ConnectionsProvider>
     </Provider>
   </StrictMode>
 );

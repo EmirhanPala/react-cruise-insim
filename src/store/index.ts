@@ -5,6 +5,7 @@ import { insimApi } from "src/service/base";
 import { authSlice } from "./authSlice";
 import { connectionSlice } from "./connectionSlice";
 import { mciSlice } from "./mciSlice";
+import { userInfoSlice } from "./userSlice";
 
 const initialState = {};
 const store = configureStore({
@@ -14,6 +15,7 @@ const store = configureStore({
         connection: connectionSlice.reducer,
         auth: authSlice.reducer,
         mci: mciSlice.reducer,
+        userInfo: userInfoSlice.reducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false }).concat(insimApi.middleware),
 
