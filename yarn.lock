@@ -1870,10 +1870,10 @@ node-fetch@^2.6.12:
   dependencies:
     whatwg-url "^5.0.0"
 
-node-insim@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/node-insim/-/node-insim-4.0.0.tgz#566ffb35c07381fc638394ef348ea5386c14ef8d"
-  integrity sha512-UxPji2rvYOCMADIVR0KmSdoLgvjGfRkGquri58j7d2liR5463zWIMnkbL4AgJIRXcUsvO/g3l1eWrEyNaq4tYw==
+node-insim@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/node-insim/-/node-insim-4.1.3.tgz#17d136a150cf90e49d79deaee92a1de2ca011dbc"
+  integrity sha512-1dQ3kcr7CxPYYOM/yEO3xrrCd3E9VbBqDtRE/z7Uw2WNoK3/6vc1r77OvutmK79x9XUoQlgW6Y2Xfcl6JaPgFA==
   dependencies:
     "@types/debug" "^4.1.7"
     "@types/lodash" "^4.14.182"
@@ -2112,6 +2112,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+ramda@^0.30.1:
+  version "0.30.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.30.1.tgz#7108ac95673062b060025052cd5143ae8fc605bf"
+  integrity sha512-tEF5I22zJnuclswcZMc8bDIrwRHRzf+NqVEmqg50ShAZMP7MWeR/RGDthfM/p+BlqvF2fXAzpn8i+SJcYD3alw==
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
@@ -2138,14 +2143,15 @@ react-is@^18.0.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
-react-node-insim@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-node-insim/-/react-node-insim-0.0.3.tgz#685f36f410907c1a357bc1ccccc30d78ff786227"
-  integrity sha512-lcl2lzGRwrhgyZ0QZg0FHhdoKFpxXkBK3V7Ii9Ady/XkbSC0JBnTggZNIAUjWlvkXpHjv3CSMyeKJUx9Ljwcrg==
+react-node-insim@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-node-insim/-/react-node-insim-0.0.6.tgz#98fc4d5fd18712d2292d41c153bdeeb29e11869d"
+  integrity sha512-AQZzsGF+m31ZWqm+RiEgDHk+Mgh00Tvw8E+1QPJ315FKcAVmQW8HtvfXTkFyJLKC3AvO5xPg6pJg+hi8lhR2fA==
   dependencies:
     "@types/react-reconciler" "^0.28.2"
     "@welefen/grid-layout" "^1.1.0"
     debug "^4.3.4"
+    ramda "^0.30.1"
     react-reconciler "0.29.0"
     yoga-layout-prebuilt "^1.10.0"
 
