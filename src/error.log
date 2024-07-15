@@ -1,0 +1,39 @@
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0
+Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0
+The above error occurred in the <ForwardRef(FlexWithRef)> component:
+
+    at FlexWithRef (D:\MyLab\react-cruise-insim\node_modules\react-node-insim\dist\cjs\lib\components\layout\Flex.js:12:23)
+    at Dashboard (D:\MyLab\react-cruise-insim\src\pages\base\Dashboard.tsx:10:19)
+    at PlayersProvider (D:\MyLab\react-cruise-insim\node_modules\react-node-insim\dist\cjs\lib\hooks\usePlayers.js:38:23)
+    at ConnectionsProvider (D:\MyLab\react-cruise-insim\node_modules\react-node-insim\dist\cjs\lib\hooks\useConnections.js:37:23)
+    at Provider (D:\MyLab\react-cruise-insim\node_modules\react-redux\lib\components\Provider.js:19:3)
+    at App
+    at InSimContextProvider (D:\MyLab\react-cruise-insim\node_modules\react-node-insim\dist\cjs\lib\internals\InSimContext.js:48:20)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+
+D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:53
+        throw ex;
+        ^
+abort("Cannot enlarge memory arrays. Either (1) compile with  -s TOTAL_MEMORY=X  with X higher than the current value 134217728, (2) compile with  -s ALLOW_MEMORY_GROWTH=1  which allows increasing the size at runtime but prevents some optimizations, (3) set Module.TOTAL_MEMORY to a higher value before the program runs, or (4) if you want malloc to return NULL (0) instead of this abort, compile with  -s ABORTING_MALLOC=0 ") at Error
+    at jsStackTrace (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:443:15)
+    at stackTrace (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:453:14)
+    at abort (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:9808:182)
+    at abortOnCannotGrowMemory (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:457:5)
+    at enlargeMemory (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:459:5)
+    at FC (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:9628:49)
+    at oB (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:8461:17)
+    at Ub (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:1832:31)
+    at Wb (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:1841:14)
+    at rf (D:\MyLab\react-cruise-insim\node_modules\yoga-layout-prebuilt\yoga-layout\build\Release\nbind.js:3285:39)
+If this abort() is unexpected, build with -s ASSERTIONS=1 which can give more information.
+(Use `node --trace-uncaught ...` to show where the exception was thrown)
+
+Node.js v20.14.0
