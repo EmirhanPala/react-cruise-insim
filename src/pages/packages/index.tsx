@@ -3,6 +3,7 @@ export { useConnInterfaceMode } from "./is_cim/useConnInterfaceMode";
 export { useConnLeave } from "./is_cnl/useConnLeave";
 export { useContactBetweenTwoCars } from "./is_con/useContactBetweenTwoCars";
 export { useConnPlayerRename } from "./is_cpr/useConnPlayerRename";
+export { useInsimMulti } from "./is_ism/useInsimMulti";
 export { useMultiCarInfo } from "./is_mci/useMultiCarInfo";
 export { useMessagesOut } from "./is_mso/useMessagesOut";
 export { useNewConnInfo } from "./is_nci/useNewConnInfo";
@@ -19,9 +20,6 @@ export { useTakeOverCar } from "./is_toc/useTakeOverCar";
 export { useUserControlObject } from "./is_uco/useUserControlObject";
 export { useVersion } from "./is_ver/useVersion";
 export { useVoteNotify } from "./is_vtn/useVoteNotify";
-
-
-
 
 
 

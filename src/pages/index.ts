@@ -1,6 +1,7 @@
-import { useAutoXInfo, useConnInterfaceMode, useConnLeave, useConnPlayerRename, useContactBetweenTwoCars, useGeneralPurpose, useMessagesOut, useMultiCarInfo, useNewConn, useNewConnInfo, useNewPlayerJoiningRace, useObjectHit, usePenalty, usePitStop, usePlayerLeaveRace, usePlayerPits, useStaPackage, useTakeOverCar, useUserControlObject, useVersion, useVoteNotify } from "./packages";
+import { useAutoXInfo, useConnInterfaceMode, useConnLeave, useConnPlayerRename, useContactBetweenTwoCars, useGeneralPurpose, useInsimMulti, useMessagesOut, useMultiCarInfo, useNewConn, useNewConnInfo, useNewPlayerJoiningRace, useObjectHit, usePenalty, usePitStop, usePlayerLeaveRace, usePlayerPits, useStaPackage, useTakeOverCar, useUserControlObject, useVersion, useVoteNotify } from "./packages";
 
 export const Packages = () => {
+    useInsimMulti();
     useMultiCarInfo();
     useMessagesOut();
     useNewConn();
