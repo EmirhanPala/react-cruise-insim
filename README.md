@@ -1,16 +1,17 @@
-# React Node InSim - minimal example
+# 🚗 React Cruise InSim
 
-## Requirements
-
+## ⚙️ Requirements
 - [Node.js](https://nodejs.org/) 14 or higher
 
-## Installation
+## 📦 Installation
+Install the necessary dependencies by running:
 
 ```shell
 npm install
 ```
 
-## Development build
+To start the development server, run:
+## 🔧 Development Build
 
 ```shell
 npm run dev
@@ -18,7 +19,8 @@ npm run dev
 
 The app connects to `127.0.0.1:29999` by default.
 
-## Production build
+## 🚀 Production Build
+Build and serve the application for production:
 
 ```shell
 npm run build
