@@ -71,21 +71,3 @@ Below is an overview of the directory and file structure along with their purpos
 You can learn more in the [React Node InSim](https://github.com/simbroadcasts/react-node-insim).
 
 To learn ReactNodeInSim, check out the [React Node InSim Documentation](https://github.com/simbroadcasts/react-node-insim/blob/main/README.md).
-
-
-
-
-
-
-
-
-
-
-
-
-
-# License
-This project and its contents may not be copied, distributed, or used in any way without the written permission of the author. The author reserves the right to make the project private at any time.
-
-# Lisans
-Bu proje ve içeriği, yazarın yazılı izni olmadan kopyalanamaz, dağıtılamaz veya herhangi bir şekilde kullanılamaz. Yazar, projenin herhangi bir zamanda özel hale getirilme hakkını saklı tutar.
